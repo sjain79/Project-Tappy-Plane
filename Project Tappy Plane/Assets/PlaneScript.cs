@@ -6,7 +6,7 @@ public class PlaneScript : MonoBehaviour {
 
     [SerializeField] float verticalSpeed = 4f;
     [SerializeField] Rigidbody2D rb;
-    public bool isDead;
+    public static bool isPlayerDead;
 
 	// Use this for initialization
 	void Start () {
@@ -15,16 +15,12 @@ public class PlaneScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(!isDead)
+        if (!isPlayerDead)
         {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity = Vector3.up * verticalSpeed;
-        }
-        }
-        else
-        {
-
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.velocity = Vector3.up * verticalSpeed;
+            }
         }
 		
 	}
@@ -33,7 +29,7 @@ public class PlaneScript : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Ground")
         {
-            isDead = true;
+            isPlayerDead = true;
         }
     }
 }
