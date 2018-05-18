@@ -35,7 +35,9 @@ public class PlaneScript : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 rb.velocity = Vector3.up * verticalSpeed;
+                transform.rotation = Quaternion.Euler(0, 0, 20f);
             }
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 0.05f);
 
             if(isPlayerDead)
             {
