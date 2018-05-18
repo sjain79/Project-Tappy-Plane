@@ -1687,4 +1687,14 @@ MonoBehaviour:
   scoreUnitsPlace: {fileID: 1257785966}
   scoreTensPlace: {fileID: 1544798364}
   scoreHundredsPlace: {fileID: 1410499895}
-  numbers: []
+  numbers:
+  - {fileID: 21300000, guid: 3277b279e989abd4a8bf5909fd48bf1b, type: 3}
+  - {fileID: 21300000, guid: 7baa7f3e3fcb40c42b1af1ec97fb7a84, type: 3}
+  - {fileID: 21300000, guid: 0be7c67cd34f4c64983a055d36065afd, type: 3}
+  - {fileID: 21300000, guid: bbc1baddba9599e4f8dafc9700397809, type: 3}
+  - {fileID: 21300000, guid: 917330c2b28c7784ba57b89731e375c2, type: 3}
+  - {fileID: 21300000, guid: d2e82876bd88aed49a7816e5eec27acb, type: 3}
+  - {fileID: 21300000, guid: 6bca87b8db012f740b3d8f58b865e75a, type: 3}
+  - {fileID: 21300000, guid: e018323c312f6b2488eadb67bb932968, type: 3}
+  - {fileID: 21300000, guid: 0999025228c02184c80d08468a337e23, type: 3}
+  - {fileID: 21300000, guid: 577a1d1edd24fd841a2b6e0a1c37f545, type: 3}
