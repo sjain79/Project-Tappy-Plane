@@ -17,12 +17,37 @@ public class PlaneScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!isPlayerDead)
+        if(GameController.gameState == GameState.Menu)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            rb.position = new Vector2(0, 0);
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameController.gameState = GameState.Playing;
+            }
+
+        }
+
+        else if (GameController.gameState == GameState.Playing)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+
+            if (Input.GetMouseButtonDown(0))
             {
                 rb.velocity = Vector3.up * verticalSpeed;
+                transform.rotation = Quaternion.Euler(0, 0, 20f);
             }
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 0.05f);
+
+            if(isPlayerDead)
+            {
+                GameController.gameState = GameState.Gameover;
+            }
+        }
+
+        else if(GameController.gameState == GameState.Gameover)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 		
 	}
