@@ -18,6 +18,7 @@ public class MenuScript : MonoBehaviour {
     private void Update()
     {
         SetTapImage();
+        //FirstTap();
     }
 
 
@@ -25,5 +26,14 @@ public class MenuScript : MonoBehaviour {
     {
         if (GameController.gameState == GameState.Menu)
             tapParent.transform.position = plane.transform.position;
+    }
+
+    public  void FirstTap()
+    {
+        Debug.Log("First Tap");
+        GameController.gameState = GameState.Playing;
+        GameObject inGamePanel = transform.parent.gameObject.transform.GetChild(1).gameObject;
+        inGamePanel.SetActive(true);
+        gameObject.SetActive(false);
     }
 }
