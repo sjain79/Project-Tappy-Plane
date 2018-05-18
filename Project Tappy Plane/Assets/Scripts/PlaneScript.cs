@@ -19,7 +19,7 @@ public class PlaneScript : MonoBehaviour {
 	void Update () {
         if(GameController.gameState == GameState.Menu)
         {
-            rb.position = new Vector2(0, 0);
+            rb.position = new Vector2(-6f, 0);
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
             if (Input.GetMouseButtonDown(0))
             {
