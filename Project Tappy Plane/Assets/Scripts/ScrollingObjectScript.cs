@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class ScrollingObjectScript : MonoBehaviour {
     [SerializeField] Rigidbody2D rb;
     public float scrollSpeed = 1.5f;
 
