@@ -8,6 +8,8 @@ public class PlaneScript : MonoBehaviour {
     [SerializeField] Rigidbody2D rb;
     public static bool isPlayerDead;
 
+    public static int score;
+
 	// Use this for initialization
 	void Start () {
 		
