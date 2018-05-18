@@ -21,7 +21,7 @@ public class PlaneScript : MonoBehaviour {
         {
             rb.position = new Vector2(0, 0);
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButtonDown(0))
             {
                 GameController.gameState = GameState.Playing;
             }
@@ -32,7 +32,7 @@ public class PlaneScript : MonoBehaviour {
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButtonDown(0))
             {
                 rb.velocity = Vector3.up * verticalSpeed;
             }
