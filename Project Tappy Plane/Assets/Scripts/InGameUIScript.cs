@@ -57,4 +57,5 @@ public class InGameUIScript : MonoBehaviour
         scoreTensPlace.sprite = numbers[(PlaneScript.score/10) % 10];
         scoreHundredsPlace.sprite = numbers[(PlaneScript.score/100) % 10];
     }
+
 }
