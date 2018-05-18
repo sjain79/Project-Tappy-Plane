@@ -21,6 +21,10 @@ public class PlaneScript : MonoBehaviour {
         {
             rb.position = new Vector2(0, 0);
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GameController.gameState = GameState.Playing;
+            }
 
         }
 
@@ -32,6 +36,16 @@ public class PlaneScript : MonoBehaviour {
             {
                 rb.velocity = Vector3.up * verticalSpeed;
             }
+
+            if(isPlayerDead)
+            {
+                GameController.gameState = GameState.Gameover;
+            }
+        }
+
+        else if(GameController.gameState == GameState.Gameover)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 		
 	}
