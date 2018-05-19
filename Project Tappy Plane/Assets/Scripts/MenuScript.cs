@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuScript : MonoBehaviour {
+public class MenuScript : MonoBehaviour
+{
 
     [SerializeField]
     RectTransform tapParent;
 
+    [SerializeField]
+    GameObject startGamePanel, getReadyText;
+
     GameObject plane;
+
+
 
     private void Start()
     {
@@ -18,7 +24,6 @@ public class MenuScript : MonoBehaviour {
     private void Update()
     {
         SetTapImage();
-        //FirstTap();
     }
 
 
@@ -28,12 +33,20 @@ public class MenuScript : MonoBehaviour {
             tapParent.transform.position = plane.transform.position;
     }
 
-    public  void FirstTap()
+    public void FirstTap()
     {
         Debug.Log("First Tap");
-        GameController.gameState = GameState.Playing;
-        GameObject inGamePanel = transform.parent.gameObject.transform.GetChild(1).gameObject;
-        inGamePanel.SetActive(true);
-        gameObject.SetActive(false);
+
+        getReadyText.SetActive(true);
+
+        for (int i=0;i<startGamePanel.transform.childCount; ++i)
+        {
+            if (i==getReadyText.transform.GetSiblingIndex())
+            {
+                continue;
+            }
+
+            startGamePanel.transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 }
