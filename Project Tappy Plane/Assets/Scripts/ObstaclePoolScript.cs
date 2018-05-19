@@ -5,11 +5,11 @@ using UnityEngine;
 public class ObstaclePoolScript : MonoBehaviour {
     [SerializeField] int obstaclePoolSize = 5;
     GameObject[] obstacles;
-    [SerializeField] GameObject obstaclePrefab;
+    public GameObject obstaclePrefab;
     float timeSinceLastSpawned = 0;
     [SerializeField] float spawnPositionX = 10f;
     int currentObstacle = 0;
-    [SerializeField] float spawnFrequency = 4f;
+    [SerializeField] float spawnFrequency = 2f;
     [SerializeField] float spawnPositionY = 0f;
 
 	// Use this for initialization
@@ -30,6 +30,7 @@ public class ObstaclePoolScript : MonoBehaviour {
 
             if (timeSinceLastSpawned >= spawnFrequency)
             {
+                Debug.Log("DONE");
                 timeSinceLastSpawned = 0;
                 obstacles[currentObstacle].transform.position = new Vector2(spawnPositionX, spawnPositionY);
                 currentObstacle++;
