@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 777528540}
   - component: {fileID: 777528539}
   - component: {fileID: 777528543}
+  - component: {fileID: 777528544}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -489,6 +490,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpeed: 6
   rb: {fileID: 777528540}
+--- !u!95 &777528544
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777528538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49f55b9ad7c53564b86b1c0ad5a10c5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &844820404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,7 +1967,7 @@ MonoBehaviour:
   obstaclePoolSize: 5
   obstaclePrefab: {fileID: 1533812263584510, guid: b3a18f377bac50b4c96077507ed6a176,
     type: 2}
-  spawnPositionX: 10
+  spawnPositionX: 20
   spawnFrequency: 4
   spawnPositionY: 0
 --- !u!1 &1562293220
