@@ -30,12 +30,12 @@ public class ObstaclePoolScript : MonoBehaviour {
 
             if (timeSinceLastSpawned >= spawnFrequency)
             {
-                Debug.Log("DONE");
                 timeSinceLastSpawned = 0;
                 obstacles[currentObstacle].transform.position = new Vector2(spawnPositionX, spawnPositionY);
                 currentObstacle++;
                 if (currentObstacle >= obstaclePoolSize)
                     currentObstacle = 0;
+                Debug.Log(obstacles[currentObstacle].transform.position.x);
             }
         }
 	}
