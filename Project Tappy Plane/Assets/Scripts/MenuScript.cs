@@ -10,7 +10,7 @@ public class MenuScript : MonoBehaviour
     RectTransform tapParent;
 
     [SerializeField]
-    GameObject startGamePanel, getReadyText;
+    GameObject startGamePanel, inGamePanel, getReadyText;
 
     GameObject plane;
 
@@ -48,5 +48,6 @@ public class MenuScript : MonoBehaviour
 
             startGamePanel.transform.GetChild(i).gameObject.SetActive(false);
         }
+        inGamePanel.SetActive(true);
     }
 }

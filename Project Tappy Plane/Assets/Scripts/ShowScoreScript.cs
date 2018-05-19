@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InGameUIScript : MonoBehaviour
+public class ShowScoreScript : MonoBehaviour
 {
     [SerializeField]
     Image scoreUnitsPlace, scoreTensPlace, scoreHundredsPlace;
 
-    bool scoreCrossed100 = false;
+    bool scoreCrossed1000 = false;
 
     [SerializeField]
     Sprite[] numbers;
@@ -27,8 +27,9 @@ public class InGameUIScript : MonoBehaviour
 
     private void ShowScore()
     {
-        if (!scoreCrossed100)
+        if (!scoreCrossed1000)
         {
+            Debug.Log("Testing");
             if (PlaneScript.score < 10)
             {
                 scoreUnitsPlace.enabled = true;
@@ -48,14 +49,15 @@ public class InGameUIScript : MonoBehaviour
                 scoreUnitsPlace.transform.localPosition = new Vector2(53, 0);
                 scoreTensPlace.transform.position = new Vector2(0, 0);
                 scoreHundredsPlace.transform.position = new Vector2(-53f, 0);
-
-                scoreCrossed100 = true;
+            }
+            else
+            {
+                scoreCrossed1000 = true;
             }
         }
 
         scoreUnitsPlace.sprite = numbers[PlaneScript.score % 10];
-        scoreTensPlace.sprite = numbers[(PlaneScript.score/10) % 10];
-        scoreHundredsPlace.sprite = numbers[(PlaneScript.score/100) % 10];
+        scoreTensPlace.sprite = numbers[(PlaneScript.score / 10) % 10];
+        scoreHundredsPlace.sprite = numbers[(PlaneScript.score / 100) % 10];
     }
-
 }
