@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4041989769265046}
+  - component: {fileID: 50563116161964696}
+  - component: {fileID: 114441946976827090}
   m_Layer: 0
   m_Name: Obstacle3
   m_TagString: Untagged
@@ -35,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4815501500907412}
   - component: {fileID: 212981142111635688}
-  - component: {fileID: 114099641514811774}
   - component: {fileID: 50453745564523142}
   - component: {fileID: 60623750332688698}
   m_Layer: 0
@@ -54,7 +55,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4448913487339198}
   - component: {fileID: 212656187956092310}
-  - component: {fileID: 114823292128379504}
   - component: {fileID: 50176827565727762}
   - component: {fileID: 60500585436741962}
   m_Layer: 0
@@ -132,6 +132,26 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1912207812150598}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!50 &50563116161964696
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533812263584510}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -251,31 +271,18 @@ PolygonCollider2D:
       - {x: 0.099999994, y: -0.5775}
       - {x: 0.099999994, y: -0.5275}
       - {x: 0.13499999, y: -0.21249999}
---- !u!114 &114099641514811774
+--- !u!114 &114441946976827090
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1912207812150598}
+  m_GameObject: {fileID: 1533812263584510}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cac235dbb5e1c6b4da3dc1d6df1c2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 50453745564523142}
-  scrollSpeed: 1.5
---- !u!114 &114823292128379504
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1921201182001424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac235dbb5e1c6b4da3dc1d6df1c2c18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 50176827565727762}
+  rb: {fileID: 50563116161964696}
   scrollSpeed: 1.5
 --- !u!212 &212656187956092310
 SpriteRenderer:
