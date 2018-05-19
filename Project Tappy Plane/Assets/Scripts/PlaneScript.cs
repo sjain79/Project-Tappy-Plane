@@ -55,4 +55,9 @@ public class PlaneScript : MonoBehaviour {
             isPlayerDead = true;
         }
     }
+
+    void SetPlaneColor()
+    {
+
+    }
 }
