@@ -7,6 +7,7 @@ public class PlaneScript : MonoBehaviour {
     [SerializeField] float verticalSpeed = 4f;
     [SerializeField] Rigidbody2D rb;
     public static bool isPlayerDead;
+    public static float scrollSpeed = 1.5f;
 
     public static int score;
 
@@ -26,6 +27,7 @@ public class PlaneScript : MonoBehaviour {
 
         else if (GameController.gameState == GameState.Playing)
         {
+            //scrollSpeed += 0.1f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
             if (Input.GetMouseButtonDown(0))

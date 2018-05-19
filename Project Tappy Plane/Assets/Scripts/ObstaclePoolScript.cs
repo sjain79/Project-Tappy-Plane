@@ -11,6 +11,7 @@ public class ObstaclePoolScript : MonoBehaviour {
     int currentObstacle = 0;
     [SerializeField] float spawnFrequency = 4f;
     [SerializeField] float spawnPositionY = 0f;
+    bool firstPlaced = false;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,14 @@ public class ObstaclePoolScript : MonoBehaviour {
     {
         if (GameController.gameState == GameState.Playing)
         {
+            if(!firstPlaced)
+            {
+                spawnPositionY = Random.Range(-0.3f, 3.06f);
+                obstacles[currentObstacle].transform.position = new Vector2(spawnPositionX, spawnPositionY);
+                spawnPositionY = 0f;
+                currentObstacle++;
+                firstPlaced = true;
+            }
             timeSinceLastSpawned += Time.deltaTime;
 
             if (timeSinceLastSpawned >= spawnFrequency)
@@ -50,7 +59,13 @@ public class ObstaclePoolScript : MonoBehaviour {
                 currentObstacle++;
                 if (currentObstacle >= obstaclePoolSize)
                     currentObstacle = 0;
+                Debug.Log(obstacles[currentObstacle].transform.position.x);
             }
+        }
+
+        else
+        {
+            firstPlaced = false;
         }
 	}
 }

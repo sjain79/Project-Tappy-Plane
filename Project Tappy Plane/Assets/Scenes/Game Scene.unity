@@ -636,7 +636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 878063808}
-  scrollSpeed: 1.5
 --- !u!50 &878063808
 Rigidbody2D:
   serializedVersion: 4
@@ -2047,7 +2046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePoolSize: 10
-  obstaclePrefab1: {fileID: 1511667286234160, guid: 9dfad0258e4f66d4898b7273a7e6c624,
+  obstaclePrefab1: {fileID: 1780846805317774, guid: 9dfad0258e4f66d4898b7273a7e6c624,
     type: 2}
   obstaclePrefab2: {fileID: 1517962135059570, guid: 47d4f6c43fffa8248a0d287b4f653ba8,
     type: 2}
@@ -2525,7 +2524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1618801799}
-  scrollSpeed: 1.5
 --- !u!114 &1618801801
 MonoBehaviour:
   m_ObjectHideFlags: 0
