@@ -2311,8 +2311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tapParent: {fileID: 232237810}
-  startGamePanel: {fileID: 0}
-  getReadyText: {fileID: 0}
+  startGamePanel: {fileID: 1568191416}
+  getReadyText: {fileID: 2102996779}
 --- !u!114 &1568191420
 MonoBehaviour:
   m_ObjectHideFlags: 0
