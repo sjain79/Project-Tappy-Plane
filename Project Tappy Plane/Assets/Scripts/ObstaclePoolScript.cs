@@ -7,7 +7,7 @@ public class ObstaclePoolScript : MonoBehaviour {
     GameObject[] obstacles;
     [SerializeField] GameObject obstaclePrefab;
     float timeSinceLastSpawned = 0;
-    [SerializeField] float spawnPositionX = 30f;
+    [SerializeField] float spawnPositionX = 10f;
     int currentObstacle = 0;
     [SerializeField] float spawnFrequency = 4f;
     [SerializeField] float spawnPositionY = 0f;
@@ -30,11 +30,11 @@ public class ObstaclePoolScript : MonoBehaviour {
 
             if (timeSinceLastSpawned >= spawnFrequency)
             {
+                timeSinceLastSpawned = 0;
                 obstacles[currentObstacle].transform.position = new Vector2(spawnPositionX, spawnPositionY);
                 currentObstacle++;
                 if (currentObstacle >= obstaclePoolSize)
                     currentObstacle = 0;
-                timeSinceLastSpawned = 0;
             }
         }
 	}

@@ -1894,7 +1894,7 @@ MonoBehaviour:
   obstaclePoolSize: 5
   obstaclePrefab: {fileID: 1533812263584510, guid: b3a18f377bac50b4c96077507ed6a176,
     type: 2}
-  spawnPositionX: 8
+  spawnPositionX: 10
   spawnFrequency: 4
   spawnPositionY: 0
 --- !u!1 &1562293220
