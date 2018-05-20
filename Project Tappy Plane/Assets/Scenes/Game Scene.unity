@@ -579,9 +579,9 @@ GameObject:
   - component: {fileID: 777528542}
   - component: {fileID: 777528541}
   - component: {fileID: 777528540}
-  - component: {fileID: 777528539}
   - component: {fileID: 777528543}
   - component: {fileID: 777528544}
+  - component: {fileID: 777528539}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -589,8 +589,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &777528539
-CircleCollider2D:
+--- !u!60 &777528539
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -601,9 +601,54 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02910477, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.17783119
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.44, y: 0.365}
+    newSize: {x: 0.44, y: 0.365}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.20493174, y: 0.09960096}
+      - {x: 0.17685795, y: 0.09406088}
+      - {x: 0.16663727, y: 0.068814695}
+      - {x: 0.15516488, y: 0.08153732}
+      - {x: 0.12616873, y: 0.10201889}
+      - {x: 0.15210104, y: 0.14565146}
+      - {x: 0.13940637, y: 0.17019442}
+      - {x: -0.10274236, y: 0.17578787}
+      - {x: -0.10813093, y: 0.12775242}
+      - {x: -0.10567474, y: 0.098843336}
+      - {x: -0.14127064, y: 0.11993181}
+      - {x: -0.19087219, y: 0.12857988}
+      - {x: -0.22335593, y: 0.104588985}
+      - {x: -0.20881304, y: 0.03256821}
+      - {x: -0.17157571, y: 0.01697475}
+      - {x: -0.12697761, y: -0.021596264}
+      - {x: -0.10417112, y: -0.06535306}
+      - {x: -0.12940645, y: -0.084280334}
+      - {x: -0.12545714, y: -0.1275682}
+      - {x: -0.09091409, y: -0.14795704}
+      - {x: -0.049637318, y: -0.12131734}
+      - {x: 0.013949394, y: -0.13953274}
+      - {x: 0.032591026, y: -0.16605455}
+      - {x: 0.05520455, y: -0.1836187}
+      - {x: 0.089727245, y: -0.18249999}
+      - {x: 0.12544426, y: -0.1400547}
+      - {x: 0.14926784, y: -0.13580452}
+      - {x: 0.1669898, y: -0.1048828}
+      - {x: 0.17301211, y: -0.13936988}
+      - {x: 0.19493167, y: -0.14631313}
+      - {x: 0.20881304, y: -0.14078787}
+      - {x: 0.2099317, y: 0.08966915}
+    - - {x: 0.01, y: 0.107499994}
+      - {x: 0.024999999, y: 0.107499994}
+      - {x: 0.03, y: 0.1025}
+      - {x: 0.01, y: 0.1025}
 --- !u!50 &777528540
 Rigidbody2D:
   serializedVersion: 4
