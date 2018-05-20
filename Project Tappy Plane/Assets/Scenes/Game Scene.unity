@@ -656,8 +656,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -23498391
   m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 840676ab79d4b024fb24911131816a7b, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 5d4140886de196648a529f06fd8a0e56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -827,6 +827,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1394128223}
+  scoreUnitsPlace: {fileID: 1257785966}
+  scoreTensPlace: {fileID: 1544798364}
+  scoreHundredsPlace: {fileID: 1410499895}
+  scoreCrossed100: 0
+  numbers:
+  - {fileID: 21300000, guid: 3277b279e989abd4a8bf5909fd48bf1b, type: 3}
+  - {fileID: 21300000, guid: 7baa7f3e3fcb40c42b1af1ec97fb7a84, type: 3}
+  - {fileID: 21300000, guid: 0be7c67cd34f4c64983a055d36065afd, type: 3}
+  - {fileID: 21300000, guid: bbc1baddba9599e4f8dafc9700397809, type: 3}
+  - {fileID: 21300000, guid: 917330c2b28c7784ba57b89731e375c2, type: 3}
+  - {fileID: 21300000, guid: d2e82876bd88aed49a7816e5eec27acb, type: 3}
+  - {fileID: 21300000, guid: 6bca87b8db012f740b3d8f58b865e75a, type: 3}
+  - {fileID: 21300000, guid: e018323c312f6b2488eadb67bb932968, type: 3}
+  - {fileID: 21300000, guid: 0999025228c02184c80d08468a337e23, type: 3}
+  - {fileID: 21300000, guid: 577a1d1edd24fd841a2b6e0a1c37f545, type: 3}
 --- !u!114 &844820407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +907,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 878063808}
-  scrollSpeed: 1.5
 --- !u!50 &878063808
 Rigidbody2D:
   serializedVersion: 4
@@ -2534,6 +2548,16 @@ MonoBehaviour:
   obstaclePrefab4: {fileID: 1656862522227880, guid: fc54baea01447ae4ba616b481ad995a5,
     type: 2}
   spawnPositionX: 20
+  obstaclePoolSize: 10
+  obstaclePrefab1: {fileID: 1780846805317774, guid: 9dfad0258e4f66d4898b7273a7e6c624,
+    type: 2}
+  obstaclePrefab2: {fileID: 1517962135059570, guid: 47d4f6c43fffa8248a0d287b4f653ba8,
+    type: 2}
+  obstaclePrefab3: {fileID: 1533812263584510, guid: b3a18f377bac50b4c96077507ed6a176,
+    type: 2}
+  obstaclePrefab4: {fileID: 1656862522227880, guid: fc54baea01447ae4ba616b481ad995a5,
+    type: 2}
+  spawnPositionX: 15
   spawnFrequency: 6
   spawnPositionY: 0
 --- !u!1 &1562293220
@@ -3137,7 +3161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1618801799}
-  scrollSpeed: 1.5
 --- !u!114 &1618801801
 MonoBehaviour:
   m_ObjectHideFlags: 0

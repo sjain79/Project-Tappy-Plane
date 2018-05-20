@@ -6,13 +6,17 @@ public class PlaneScript : MonoBehaviour {
 
     [SerializeField] float verticalSpeed = 4f;
     [SerializeField] Rigidbody2D rb;
+    Animator playerAnimator;
     public static bool isPlayerDead;
+    public static float scrollSpeed = 1.5f;
+    int previousColor;
 
     public static int score;
 
 	// Use this for initialization
 	void Start () {
-		
+        playerAnimator = gameObject.GetComponent<Animator>();
+        previousColor = (int)GameController.planeColor;
 	}
 	
 	// Update is called once per frame
@@ -21,11 +25,13 @@ public class PlaneScript : MonoBehaviour {
         {
             rb.position = new Vector2(-6f, 0);
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            SetPlaneColor();
 
         }
 
         else if (GameController.gameState == GameState.Playing)
         {
+            scrollSpeed += 0.001f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
             if (Input.GetMouseButtonDown(0))
@@ -50,7 +56,7 @@ public class PlaneScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Obstacle")
         {
             isPlayerDead = true;
         }
@@ -58,6 +64,25 @@ public class PlaneScript : MonoBehaviour {
 
     void SetPlaneColor()
     {
+        if ((int)GameController.planeColor != previousColor)
+        {
+            switch (GameController.planeColor)
+            {
+                case PlaneColor.Blue:
+                    playerAnimator.SetTrigger("BlueTrigger");
+                    break;
+                case PlaneColor.Green:
+                    playerAnimator.SetTrigger("GreenTrigger");
+                    break;
+                case PlaneColor.Red:
+                    playerAnimator.SetTrigger("RedTrigger");
+                    break;
+                case PlaneColor.Yellow:
+                    playerAnimator.SetTrigger("YellowTrigger");
+                    break;
 
+            }
+            previousColor = (int)GameController.planeColor;
+        }
     }
 }
