@@ -2215,8 +2215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dde0db7f9029bb4097dd525b85a87e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverPanel: {fileID: 0}
-  gameOverText: {fileID: 0}
+  gameOverPanel: {fileID: 1394128223}
+  gameOverText: {fileID: 1674139415}
 --- !u!114 &1394128226
 MonoBehaviour:
   m_ObjectHideFlags: 0
