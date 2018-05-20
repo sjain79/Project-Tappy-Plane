@@ -35,6 +35,8 @@ public class ObstaclePoolScript : MonoBehaviour {
     {
         if (GameController.gameState == GameState.Playing)
         {
+            spawnFrequency = 2.67f * PlaneScript.scrollSpeed;
+
             if(!firstPlaced)
             {
                 spawnPositionY = Random.Range(-0.3f, 3.06f);
