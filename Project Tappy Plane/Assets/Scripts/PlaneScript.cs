@@ -8,7 +8,7 @@ public class PlaneScript : MonoBehaviour {
     [SerializeField] Rigidbody2D rb;
     Animator playerAnimator;
     public static bool isPlayerDead;
-    public static float scrollSpeed = 1.5f;
+    public static float scrollSpeed = 3f;
     int previousColor;
 
     public static int score;
@@ -31,7 +31,7 @@ public class PlaneScript : MonoBehaviour {
 
         else if (GameController.gameState == GameState.Playing)
         {
-            scrollSpeed += 0.001f * Time.deltaTime;
+            scrollSpeed += 0.01f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
             if (Input.GetMouseButtonDown(0))

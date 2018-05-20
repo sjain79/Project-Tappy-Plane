@@ -35,7 +35,7 @@ public class ObstaclePoolScript : MonoBehaviour {
     {
         if (GameController.gameState == GameState.Playing)
         {
-            spawnFrequency = 2.67f * PlaneScript.scrollSpeed;
+            spawnFrequency = 7f / PlaneScript.scrollSpeed;
 
             if(!firstPlaced)
             {
