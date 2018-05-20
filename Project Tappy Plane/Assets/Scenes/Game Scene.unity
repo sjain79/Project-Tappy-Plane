@@ -827,21 +827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1394128223}
-  scoreUnitsPlace: {fileID: 1257785966}
-  scoreTensPlace: {fileID: 1544798364}
-  scoreHundredsPlace: {fileID: 1410499895}
-  scoreCrossed100: 0
-  numbers:
-  - {fileID: 21300000, guid: 3277b279e989abd4a8bf5909fd48bf1b, type: 3}
-  - {fileID: 21300000, guid: 7baa7f3e3fcb40c42b1af1ec97fb7a84, type: 3}
-  - {fileID: 21300000, guid: 0be7c67cd34f4c64983a055d36065afd, type: 3}
-  - {fileID: 21300000, guid: bbc1baddba9599e4f8dafc9700397809, type: 3}
-  - {fileID: 21300000, guid: 917330c2b28c7784ba57b89731e375c2, type: 3}
-  - {fileID: 21300000, guid: d2e82876bd88aed49a7816e5eec27acb, type: 3}
-  - {fileID: 21300000, guid: 6bca87b8db012f740b3d8f58b865e75a, type: 3}
-  - {fileID: 21300000, guid: e018323c312f6b2488eadb67bb932968, type: 3}
-  - {fileID: 21300000, guid: 0999025228c02184c80d08468a337e23, type: 3}
-  - {fileID: 21300000, guid: 577a1d1edd24fd841a2b6e0a1c37f545, type: 3}
 --- !u!114 &844820407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,16 +2524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePoolSize: 5
-  obstaclePrefab1: {fileID: 1360591760218012, guid: 62f92732d3d92a246a3dd9bc2b02b8b6,
-    type: 2}
-  obstaclePrefab2: {fileID: 1517962135059570, guid: 47d4f6c43fffa8248a0d287b4f653ba8,
-    type: 2}
-  obstaclePrefab3: {fileID: 1533812263584510, guid: b3a18f377bac50b4c96077507ed6a176,
-    type: 2}
-  obstaclePrefab4: {fileID: 1656862522227880, guid: fc54baea01447ae4ba616b481ad995a5,
-    type: 2}
-  spawnPositionX: 20
-  obstaclePoolSize: 10
   obstaclePrefab1: {fileID: 1780846805317774, guid: 9dfad0258e4f66d4898b7273a7e6c624,
     type: 2}
   obstaclePrefab2: {fileID: 1517962135059570, guid: 47d4f6c43fffa8248a0d287b4f653ba8,
@@ -2557,7 +2532,7 @@ MonoBehaviour:
     type: 2}
   obstaclePrefab4: {fileID: 1656862522227880, guid: fc54baea01447ae4ba616b481ad995a5,
     type: 2}
-  spawnPositionX: 15
+  spawnPositionX: 20
   spawnFrequency: 6
   spawnPositionY: 0
 --- !u!1 &1562293220
@@ -2818,7 +2793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tapParent: {fileID: 232237810}
   startGamePanel: {fileID: 1568191416}
-  inGamePanel: {fileID: 0}
+  inGamePanel: {fileID: 844820404}
   getReadyText: {fileID: 2102996779}
 --- !u!114 &1568191420
 MonoBehaviour:
@@ -3789,7 +3764,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2009749115}
-  - component: {fileID: 2009749114}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3797,20 +3771,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2009749114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2009749113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d87e5d0c30fd80448b041869cb611f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newHighScoreText: {fileID: 0}
-  showHighScoreText: {fileID: 0}
-  highScoreNumber: {fileID: 0}
 --- !u!4 &2009749115
 Transform:
   m_ObjectHideFlags: 0
