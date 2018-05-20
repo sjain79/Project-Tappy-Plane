@@ -9,6 +9,7 @@ public class PlaneScript : MonoBehaviour {
     Animator playerAnimator;
     public static bool isPlayerDead;
     public static float scrollSpeed = 3f;
+    public int starsCollected = 0;
     int previousColor;
 
     public static int score;
@@ -59,6 +60,15 @@ public class PlaneScript : MonoBehaviour {
         if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Obstacle")
         {
             isPlayerDead = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Star")
+        {
+            starsCollected++;
+            Destroy(collision.gameObject);
         }
     }
 
