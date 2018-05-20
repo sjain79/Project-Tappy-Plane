@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { Menu, Playing, Gameover };
+public enum GameState { Menu, Playing, Falling, Gameover };
 public enum PlaneColor { Blue, Green, Red, Yellow };
 
 public class GameController : MonoBehaviour

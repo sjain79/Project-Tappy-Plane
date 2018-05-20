@@ -41,25 +41,29 @@ public class PlaneScript : MonoBehaviour {
                 transform.rotation = Quaternion.Euler(0, 0, 20f);
             }
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 0.05f);
+        }
 
-            if(isPlayerDead)
-            {
-                GameController.gameState = GameState.Gameover;
-            }
+        else if (GameController.gameState == GameState.Falling)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, -90f), 0.1f);
+            rb.gravityScale = 4f;
         }
 
         else if(GameController.gameState == GameState.Gameover)
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            playerAnimator.enabled = false;
         }
 		
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Obstacle")
+        if(collision.gameObject.tag == "Ground")
         {
             isPlayerDead = true;
+            GameController.gameState = GameState.Gameover;
         }
     }
 
@@ -69,6 +73,12 @@ public class PlaneScript : MonoBehaviour {
         {
             starsCollected++;
             Destroy(collision.gameObject);
+        }
+
+        if(collision.gameObject.tag == "Obstacle")
+        {
+            isPlayerDead = true;
+            GameController.gameState = GameState.Falling;
         }
     }
 
