@@ -1,11 +1,9 @@
 fileFormatVersion: 2
 guid: 933413bbe5f8db646bc51eb8fc30783e
-timeCreated: 1526583912
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 5
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,11 +51,13 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -67,7 +67,19 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -82,7 +94,13 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape: []
-  spritePackingTag: 
+    bones: []
+    spriteID: f6de9eee575e55f42a005ee05632587e
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: Planes
   userData: 
   assetBundleName: 
   assetBundleVariant: 
