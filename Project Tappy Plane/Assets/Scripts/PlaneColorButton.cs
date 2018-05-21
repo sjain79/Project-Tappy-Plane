@@ -23,10 +23,17 @@ public class PlaneColorButton : MonoBehaviour
         }
         else
         {
-            bluePlane.SetActive(false);
-            greenPlane.SetActive(false);
-            redPlane.SetActive(false);
-            yellowPlane.SetActive(false);
+            bluePlane.GetComponent<Animator>().SetTrigger("Close");
+            greenPlane.GetComponent<Animator>().SetTrigger("Close");
+            redPlane.GetComponent<Animator>().SetTrigger("Close");
+            yellowPlane.GetComponent<Animator>().SetTrigger("Close");
+
+            //bluePlane.SetActive(false);
+            //greenPlane.SetActive(false);
+            //redPlane.SetActive(false);
+            //yellowPlane.SetActive(false);
+
+
 
             bluePlane.GetComponent<RectTransform>().localPosition = new Vector2(0, 0);
             greenPlane.GetComponent<RectTransform>().localPosition = new Vector2(0, 0);

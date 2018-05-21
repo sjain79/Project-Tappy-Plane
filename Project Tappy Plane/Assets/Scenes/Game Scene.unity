@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 255158121}
   - component: {fileID: 255158120}
   - component: {fileID: 255158123}
+  - component: {fileID: 255158124}
   m_Layer: 5
   m_Name: Red Plane Button
   m_TagString: Untagged
@@ -182,7 +183,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255158118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.99956346, y: 0.99956346, z: 0.99956346}
   m_Children: []
   m_Father: {fileID: 1188114627}
@@ -296,6 +297,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &255158124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255158118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d224ede9d4f074c8bdbd9d3322cb3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &269416043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1354,7 @@ GameObject:
   - component: {fileID: 1054918079}
   - component: {fileID: 1054918078}
   - component: {fileID: 1054918081}
+  - component: {fileID: 1054918082}
   m_Layer: 5
   m_Name: Yellow Plane Button
   m_TagString: Untagged
@@ -1356,7 +1369,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1054918076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.99956346, y: 0.99956346, z: 0.99956346}
   m_Children: []
   m_Father: {fileID: 1188114627}
@@ -1470,6 +1483,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1054918082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1054918076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d224ede9d4f074c8bdbd9d3322cb3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1090071221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1683,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1188114626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2116343712}
@@ -1921,6 +1945,7 @@ GameObject:
   - component: {fileID: 1311873329}
   - component: {fileID: 1311873328}
   - component: {fileID: 1311873331}
+  - component: {fileID: 1311873332}
   m_Layer: 5
   m_Name: Green Plane Button
   m_TagString: Untagged
@@ -1935,7 +1960,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311873326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.99956346, y: 0.99956346, z: 0.99956346}
   m_Children: []
   m_Father: {fileID: 1188114627}
@@ -2049,6 +2074,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1311873332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311873326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d224ede9d4f074c8bdbd9d3322cb3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1319269940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,6 +4516,7 @@ GameObject:
   - component: {fileID: 2116343714}
   - component: {fileID: 2116343713}
   - component: {fileID: 2116343716}
+  - component: {fileID: 2116343717}
   m_Layer: 5
   m_Name: Blue Plane Button
   m_TagString: Untagged
@@ -4494,7 +4531,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116343711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1188114627}
@@ -4608,3 +4645,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2116343717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2116343711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d224ede9d4f074c8bdbd9d3322cb3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
