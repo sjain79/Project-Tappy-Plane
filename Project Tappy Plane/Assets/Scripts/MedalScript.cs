@@ -15,17 +15,20 @@ public class MedalScript : MonoBehaviour
 
     private void Start()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        PlaneScript planeScript = player.GetComponent<PlaneScript>();
+
         image = GetComponent<Image>();
 
-        if (PlaneScript.score>minScoreBronze)
+        if (planeScript.starsCollected >= minScoreBronze)
         {
-            image.sprite = bronzeMedal;   
+            image.sprite = bronzeMedal;
         }
-        else if (PlaneScript.score > minScoreSilver)
+        else if (planeScript.starsCollected >= minScoreSilver)
         {
             image.sprite = silverMedal;
         }
-        else if (PlaneScript.score > minScoreGold)
+        else if (planeScript.starsCollected >= minScoreGold)
         {
             image.sprite = goldMedal;
         }
