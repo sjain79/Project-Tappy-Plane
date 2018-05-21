@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowHighScore : MonoBehaviour {
+public class ShowHighScore : MonoBehaviour
+{
 
     [SerializeField]
     Image highScoreUnitsPlace, highScoreTensPlace, highScoreHundredsPlace;
@@ -21,7 +22,7 @@ public class ShowHighScore : MonoBehaviour {
 
         RectTransform myRectTransform;
 
-        if (highScore>=100)
+        if (highScore >= 100)
         {
             myRectTransform = gameObject.GetComponent<RectTransform>();
             myRectTransform.localPosition = new Vector3(myRectTransform.localPosition.x + 19, myRectTransform.localPosition.y, myRectTransform.localPosition.z);
@@ -47,7 +48,7 @@ public class ShowHighScore : MonoBehaviour {
                 highScoreUnitsPlace.enabled = true;
                 highScoreUnitsPlace.transform.localPosition = new Vector2(0, 0);
             }
-            else if (highScore >= 10 && PlaneScript.score < 100)
+            else if (highScore >= 10 && highScore < 100)
             {
                 highScoreTensPlace.enabled = true;
 

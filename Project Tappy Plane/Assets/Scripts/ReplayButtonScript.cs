@@ -10,7 +10,8 @@ public class ReplayButtonScript : MonoBehaviour
         PlaneScript.score = 0;
         PlaneScript.isPlayerDead = false;
         GameController.gameState = GameState.Menu;
-        StartCoroutine(StartLoadAsync());
+        SceneManager.LoadScene(0);
+        //StartCoroutine(StartLoadAsync());
     }
 
 
