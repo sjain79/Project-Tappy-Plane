@@ -40,15 +40,15 @@ public class ShowScoreScript : MonoBehaviour
                 scoreTensPlace.enabled = true;
 
                 scoreUnitsPlace.transform.localPosition = new Vector2(26.5f, 0);
-                scoreTensPlace.transform.position = new Vector2(-26.5f, 0);
+                scoreTensPlace.transform.localPosition = new Vector2(-26.5f, 0);
             }
             else if (PlaneScript.score >= 100)
             {
                 scoreHundredsPlace.enabled = true;
 
                 scoreUnitsPlace.transform.localPosition = new Vector2(53, 0);
-                scoreTensPlace.transform.position = new Vector2(0, 0);
-                scoreHundredsPlace.transform.position = new Vector2(-53f, 0);
+                scoreTensPlace.transform.localPosition = new Vector2(0, 0);
+                scoreHundredsPlace.transform.localPosition = new Vector2(-53f, 0);
             }
             else
             {

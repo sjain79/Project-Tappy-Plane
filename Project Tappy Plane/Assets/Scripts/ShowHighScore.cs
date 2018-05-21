@@ -53,15 +53,15 @@ public class ShowHighScore : MonoBehaviour
                 highScoreTensPlace.enabled = true;
 
                 highScoreUnitsPlace.transform.localPosition = new Vector2(26.5f, 0);
-                highScoreTensPlace.transform.position = new Vector2(-26.5f, 0);
+                highScoreTensPlace.transform.localPosition = new Vector2(-26.5f, 0);
             }
             else if (highScore >= 100)
             {
                 highScoreHundredsPlace.enabled = true;
 
                 highScoreUnitsPlace.transform.localPosition = new Vector2(53, 0);
-                highScoreTensPlace.transform.position = new Vector2(0, 0);
-                highScoreHundredsPlace.transform.position = new Vector2(-53f, 0);
+                highScoreTensPlace.transform.localPosition = new Vector2(0, 0);
+                highScoreHundredsPlace.transform.localPosition = new Vector2(-53f, 0);
             }
             else
             {
