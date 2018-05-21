@@ -4011,9 +4011,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f859067feba5ded4391f0356b9486ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minScoreBronze: 0
-  minScoreSilver: 0
-  minScoreGold: 0
+  minScoreBronze: 3
+  minScoreSilver: 6
+  minScoreGold: 9
   bronzeMedal: {fileID: 21300000, guid: 5785a5bea39f122448a97de72004dfce, type: 3}
   silverMedal: {fileID: 21300000, guid: da9cfe8317ef46c43b793d079f000de5, type: 3}
   goldMedal: {fileID: 21300000, guid: 91506e332c152cb48abcb464be24cd0b, type: 3}
