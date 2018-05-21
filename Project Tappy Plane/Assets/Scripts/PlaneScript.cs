@@ -16,6 +16,9 @@ public class PlaneScript : MonoBehaviour {
 
     public static int score;
 
+
+
+
 	// Use this for initialization
 	void Start () {
         playerAnimator = gameObject.GetComponent<Animator>();

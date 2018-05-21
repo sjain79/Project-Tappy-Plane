@@ -10,6 +10,18 @@ public class ReplayButtonScript : MonoBehaviour
         PlaneScript.score = 0;
         PlaneScript.isPlayerDead = false;
         GameController.gameState = GameState.Menu;
-        SceneManager.LoadScene(0);
+        StartCoroutine(StartLoadAsync());
+    }
+
+
+    IEnumerator StartLoadAsync()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }
