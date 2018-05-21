@@ -18,6 +18,15 @@ public class ShowHighScore : MonoBehaviour {
     private void Start()
     {
         highScore = PlayerPrefs.GetInt("Highscore", 0);
+
+        RectTransform myRectTransform;
+
+        if (highScore>=100)
+        {
+            myRectTransform = gameObject.GetComponent<RectTransform>();
+            myRectTransform.localPosition = new Vector3(myRectTransform.localPosition.x + 19, myRectTransform.localPosition.y, myRectTransform.localPosition.z);
+        }
+
         highScoreUnitsPlace.enabled = false;
         highScoreTensPlace.enabled = false;
         highScoreHundredsPlace.enabled = false;

@@ -21,4 +21,5 @@ public class HighScore : MonoBehaviour
             showHighScoreText.SetActive(true);
         }
     }
+
 }
