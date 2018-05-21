@@ -19,7 +19,7 @@ public class PlaneScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         playerAnimator = gameObject.GetComponent<Animator>();
-        previousColor = (int)GameController.planeColor;
+        previousColor = -1;
 	}
 	
 	// Update is called once per frame

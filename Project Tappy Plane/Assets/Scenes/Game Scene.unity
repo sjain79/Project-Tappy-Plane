@@ -2822,7 +2822,7 @@ MonoBehaviour:
     type: 2}
   obstaclePrefab4: {fileID: 1656862522227880, guid: fc54baea01447ae4ba616b481ad995a5,
     type: 2}
-  spawnPositionX: 20
+  spawnPositionX: 15
   spawnFrequency: 6
   spawnPositionY: 0
 --- !u!114 &1554403655
