@@ -12,6 +12,8 @@ public class PlaneScript : MonoBehaviour {
     public int starsCollected = 0;
     int previousColor;
 
+    
+
     public static int score;
 
 	// Use this for initialization
@@ -26,8 +28,8 @@ public class PlaneScript : MonoBehaviour {
         {
             rb.position = new Vector2(-6f, 0);
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            GameController.planeColor = (PlaneColor)PlayerPrefs.GetInt("Plane Color", 0);
             SetPlaneColor();
-
         }
 
         else if (GameController.gameState == GameState.Playing)
@@ -103,6 +105,14 @@ public class PlaneScript : MonoBehaviour {
 
             }
             previousColor = (int)GameController.planeColor;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ScoreObstacle"))
+        {
+            score++;
         }
     }
 }

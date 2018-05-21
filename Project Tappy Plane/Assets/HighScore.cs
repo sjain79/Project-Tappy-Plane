@@ -12,11 +12,12 @@ public class HighScore : MonoBehaviour
         if (PlayerPrefs.GetInt("Highscore",0)<PlaneScript.score)
         {
             newHighScoreText.SetActive(true);
-            highScoreNumber.SetActive(true);
+            highScoreNumber.SetActive(false);
             PlayerPrefs.SetInt("Highscore", PlaneScript.score);
         }
         else
         {
+            highScoreNumber.SetActive(true);
             showHighScoreText.SetActive(true);
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameOverPanelScript : MonoBehaviour
 {
     [SerializeField]
-    GameObject gameOverPanel, gameOverText;
+    GameObject gameOverPanel, gameOverText, highScoreText, newHighScoreText;
 
     private void Update()
     {
@@ -13,6 +13,9 @@ public class GameOverPanelScript : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
             gameOverText.SetActive(true);
+            highScoreText.SetActive(false);
+            newHighScoreText.SetActive(false);
+
         }
     }
 }
