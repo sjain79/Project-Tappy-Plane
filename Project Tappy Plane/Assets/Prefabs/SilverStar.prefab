@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50969049028349898}
   - component: {fileID: 58315410386480402}
   - component: {fileID: 114072933495493850}
+  - component: {fileID: 114564549352418830}
   m_Layer: 0
   m_Name: SilverStar
   m_TagString: Star
@@ -90,6 +91,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50969049028349898}
+--- !u!114 &114564549352418830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467098883350608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a9409addec6d44980028fbf064cac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212885518137293776
 SpriteRenderer:
   m_ObjectHideFlags: 1

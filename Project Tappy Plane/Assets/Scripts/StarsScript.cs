@@ -24,11 +24,17 @@ public class StarsScript : MonoBehaviour {
             {
                 float spawnPositionY = Random.Range(-0.4f, 0.2f);
                 if (planeScript.starsCollected < 3)
+                {
                     Instantiate(Bronze, new Vector2(poolScript.spawnPositionX, spawnPositionY), Quaternion.identity);
+                }
                 else if (planeScript.starsCollected < 6)
+                {
                     Instantiate(Silver, new Vector2(poolScript.spawnPositionX, spawnPositionY), Quaternion.identity);
+                }
                 else if (planeScript.starsCollected < 9)
+                {
                     Instantiate(Gold, new Vector2(poolScript.spawnPositionX, spawnPositionY), Quaternion.identity);
+                }
                 timeSinceLastSpawned = poolScript.spawnFrequency / 2f;
             }
         }
