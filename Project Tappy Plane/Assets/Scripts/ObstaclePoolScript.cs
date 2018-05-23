@@ -37,7 +37,7 @@ public class ObstaclePoolScript : MonoBehaviour {
         {
             spawnFrequency = 7f / PlaneScript.scrollSpeed;
 
-            if(!firstPlaced)
+            if (!firstPlaced)
             {
                 spawnPositionY = Random.Range(-0.3f, 3.06f);
                 obstacles[currentObstacle].transform.position = new Vector2(spawnPositionX, spawnPositionY);
@@ -50,7 +50,7 @@ public class ObstaclePoolScript : MonoBehaviour {
             if (timeSinceLastSpawned >= spawnFrequency)
             {
                 timeSinceLastSpawned = 0;
-                if(currentObstacle % 4 == 0)
+                if (currentObstacle % 4 == 0)
                 {
                     spawnPositionY = Random.Range(-0.3f, 3.06f);
                     obstacles[currentObstacle].transform.position = new Vector2(spawnPositionX, spawnPositionY);
@@ -61,6 +61,14 @@ public class ObstaclePoolScript : MonoBehaviour {
                 currentObstacle++;
                 if (currentObstacle >= obstaclePoolSize)
                     currentObstacle = 0;
+            }
+        }
+
+        else if (GameController.gameState == GameState.Falling)
+        {
+            for (int i = 0; i < obstacles.Length; ++i)
+            {
+                obstacles[i].GetComponent<Collider2D>().enabled = false;
             }
         }
 

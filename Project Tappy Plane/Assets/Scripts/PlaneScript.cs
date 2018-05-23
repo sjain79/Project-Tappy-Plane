@@ -37,7 +37,7 @@ public class PlaneScript : MonoBehaviour {
 
         else if (GameController.gameState == GameState.Playing)
         {
-            scrollSpeed += 0.01f * Time.deltaTime;
+            //scrollSpeed += 0.01f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 
             if (Input.GetMouseButtonDown(0))
@@ -70,10 +70,6 @@ public class PlaneScript : MonoBehaviour {
             isPlayerDead = true;
             GameController.gameState = GameState.Gameover;
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
         if (collision.gameObject.tag == "Star")
         {
             starsCollected++;

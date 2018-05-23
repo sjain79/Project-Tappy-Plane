@@ -8,7 +8,7 @@ public class StarCheckCollisionScript : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Obstacle")
         {
-            gameObject.transform.position = new Vector2(collision.gameObject.transform.position.x + 0.5f, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector2(collision.gameObject.transform.position.x + 1f, gameObject.transform.position.y);
         }
     }
 }
