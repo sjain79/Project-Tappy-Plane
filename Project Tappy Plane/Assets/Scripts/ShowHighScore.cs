@@ -50,6 +50,7 @@ public class ShowHighScore : MonoBehaviour
             }
             else if (highScore >= 10 && highScore < 100)
             {
+                highScoreUnitsPlace.enabled = true;
                 highScoreTensPlace.enabled = true;
 
                 highScoreUnitsPlace.transform.localPosition = new Vector2(26.5f, 0);
@@ -57,6 +58,8 @@ public class ShowHighScore : MonoBehaviour
             }
             else if (highScore >= 100)
             {
+                highScoreUnitsPlace.enabled = true;
+                highScoreTensPlace.enabled = true;
                 highScoreHundredsPlace.enabled = true;
 
                 highScoreUnitsPlace.transform.localPosition = new Vector2(53, 0);
@@ -72,5 +75,9 @@ public class ShowHighScore : MonoBehaviour
         highScoreUnitsPlace.sprite = numbers[highScore % 10];
         highScoreTensPlace.sprite = numbers[(highScore / 10) % 10];
         highScoreHundredsPlace.sprite = numbers[(highScore / 100) % 10];
+
+        highScoreUnitsPlace.SetNativeSize();
+        highScoreTensPlace.SetNativeSize();
+        highScoreHundredsPlace.SetNativeSize();
     }
 }
