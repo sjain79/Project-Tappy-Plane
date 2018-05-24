@@ -16,16 +16,23 @@ public class PlaneScript : MonoBehaviour {
 
     public static int score;
 
+    GameObject[] children;
 
-    ParticleSystem particleSystem;
-
-
+    int currentPuff = 0;
 
 	// Use this for initialization
 	void Start () {
         playerAnimator = gameObject.GetComponent<Animator>();
         previousColor = -1;
-        particleSystem = GetComponent<ParticleSystem>();
+
+        children = new GameObject[transform.childCount]; 
+
+        for (int i=0;i<transform.childCount;++i)
+        {
+            children[i] = transform.GetChild(i).gameObject;
+        }
+
+
 	}
 	
 	// Update is called once per frame
@@ -48,6 +55,12 @@ public class PlaneScript : MonoBehaviour {
                 rb.velocity = Vector3.up * verticalSpeed;
                 transform.rotation = Quaternion.Euler(0, 0, 20f);
 
+                if (currentPuff >= transform.childCount) 
+                {
+                    currentPuff = 0;
+                }
+
+                children[currentPuff++].SetActive(true);
             }
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 0.05f);
         }
