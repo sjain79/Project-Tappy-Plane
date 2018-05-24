@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50329159232854614}
   - component: {fileID: 58284591031591364}
   - component: {fileID: 114670895446014782}
+  - component: {fileID: 114472918850933604}
   m_Layer: 0
   m_Name: GoldStar
   m_TagString: Star
@@ -78,6 +79,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.0975
+--- !u!114 &114472918850933604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1730059283790990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc938dfdf9175c429715ac8a59e5bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114670895446014782
 MonoBehaviour:
   m_ObjectHideFlags: 1
