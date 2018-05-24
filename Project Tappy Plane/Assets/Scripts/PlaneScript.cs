@@ -49,6 +49,10 @@ public class PlaneScript : MonoBehaviour {
         {
             //scrollSpeed += 0.01f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            if(transform.rotation.z < 0f)
+            {
+                transform.rotation = Quaternion.identity;
+            }
 
             if (Input.GetMouseButtonDown(0))
             {
