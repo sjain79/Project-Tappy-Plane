@@ -17,12 +17,15 @@ public class PlaneScript : MonoBehaviour {
     public static int score;
 
 
+    ParticleSystem particleSystem;
+
 
 
 	// Use this for initialization
 	void Start () {
         playerAnimator = gameObject.GetComponent<Animator>();
         previousColor = -1;
+        particleSystem = GetComponent<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -44,6 +47,7 @@ public class PlaneScript : MonoBehaviour {
             {
                 rb.velocity = Vector3.up * verticalSpeed;
                 transform.rotation = Quaternion.Euler(0, 0, 20f);
+
             }
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 0.05f);
         }
