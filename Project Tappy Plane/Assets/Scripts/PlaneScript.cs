@@ -42,7 +42,7 @@ public class PlaneScript : MonoBehaviour {
         {
             //scrollSpeed += 0.01f * Time.deltaTime;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-            if(transform.rotation.z < 0f)
+            if (transform.rotation.z < 0f)
             {
                 transform.rotation = Quaternion.identity;
             }
@@ -50,9 +50,10 @@ public class PlaneScript : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 rb.velocity = Vector3.up * verticalSpeed;
-                transform.rotation = Quaternion.Euler(0, 0, 20f);
+                transform.rotation = Quaternion.Euler(0, 0, 25f);
 
             }
+                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, -90f), 0.01f);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 0.05f);
         }
 
