@@ -6,12 +6,15 @@ public class ObstaclePoolScript : MonoBehaviour {
     [SerializeField] int obstaclePoolSize = 10;
     GameObject[] obstacles;
     public GameObject obstaclePrefab1, obstaclePrefab2, obstaclePrefab3, obstaclePrefab4;
+    public StarsScript starsScript;
     float timeSinceLastSpawned = 0;
     public float spawnPositionX = 10f;
     int currentObstacle = 0;
     public float spawnFrequency;
     [SerializeField] float spawnPositionY = 0f;
     bool firstPlaced = false;
+    int obstaclesSinceLastStar = 0;
+    int starFrequency = 5;
 
 	// Use this for initialization
 	void Start () {
@@ -49,6 +52,10 @@ public class ObstaclePoolScript : MonoBehaviour {
 
             if (timeSinceLastSpawned >= spawnFrequency)
             {
+                if(obstaclesSinceLastStar % starFrequency == 0)
+                {
+                    starsScript.SpawnStar();
+                }
                 timeSinceLastSpawned = 0;
                 if (currentObstacle % 4 == 0)
                 {
@@ -61,6 +68,8 @@ public class ObstaclePoolScript : MonoBehaviour {
                 currentObstacle++;
                 if (currentObstacle >= obstaclePoolSize)
                     currentObstacle = 0;
+                obstaclesSinceLastStar++;
+
             }
         }
 

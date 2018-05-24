@@ -17,26 +17,43 @@ public class StarsScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (GameController.gameState == GameState.Playing)
-        {
-            timeSinceLastSpawned += Time.deltaTime;
-            if (timeSinceLastSpawned >= poolScript.spawnFrequency * 5f)
-            {
-                float spawnPositionY = Random.Range(-0.4f, 0.2f);
-                if (planeScript.starsCollected < 3)
-                {
-                    Instantiate(Bronze, new Vector2(poolScript.spawnPositionX, spawnPositionY), Quaternion.identity);
-                }
-                else if (planeScript.starsCollected < 6)
-                {
-                    Instantiate(Silver, new Vector2(poolScript.spawnPositionX, spawnPositionY), Quaternion.identity);
-                }
-                else if (planeScript.starsCollected < 9)
-                {
-                    Instantiate(Gold, new Vector2(poolScript.spawnPositionX, spawnPositionY), Quaternion.identity);
-                }
-                timeSinceLastSpawned = poolScript.spawnFrequency / 2f;
-            }
-        }
+        //if (GameController.gameState == GameState.Playing)
+        //{
+        //    timeSinceLastSpawned += Time.deltaTime;
+        //    if (timeSinceLastSpawned >= poolScript.spawnFrequency * 4f)
+        //    {
+        //        float spawnPositionY = Random.Range(-0.4f, 0.2f);
+        //        if (planeScript.starsCollected < 3)
+        //        {
+        //            Instantiate(Bronze, new Vector2(poolScript.spawnPositionX + 2.5f, spawnPositionY), Quaternion.identity);
+        //        }
+        //        else if (planeScript.starsCollected < 6)
+        //        {
+        //            Instantiate(Silver, new Vector2(poolScript.spawnPositionX + 2.5f, spawnPositionY), Quaternion.identity);
+        //        }
+        //        else if (planeScript.starsCollected < 9)
+        //        {
+        //            Instantiate(Gold, new Vector2(poolScript.spawnPositionX + 2.5f, spawnPositionY), Quaternion.identity);
+        //        }
+        //        timeSinceLastSpawned = poolScript.spawnFrequency / 2f;
+        //    }
+        //}
 	}
+
+    public void SpawnStar()
+    {
+        float spawnPositionY = Random.Range(-0.6f, 0.4f);
+        if (planeScript.starsCollected < 3)
+        {
+            Instantiate(Bronze, new Vector2(poolScript.spawnPositionX + 2.5f, spawnPositionY), Quaternion.identity);
+        }
+        else if (planeScript.starsCollected < 6)
+        {
+            Instantiate(Silver, new Vector2(poolScript.spawnPositionX + 2.5f, spawnPositionY), Quaternion.identity);
+        }
+        else if (planeScript.starsCollected < 9)
+        {
+            Instantiate(Gold, new Vector2(poolScript.spawnPositionX + 2.5f, spawnPositionY), Quaternion.identity);
+        }
+    }
 }
