@@ -20,11 +20,11 @@ public class MedalScript : MonoBehaviour
 
         image = GetComponent<Image>();
 
-        if (planeScript.starsCollected >= minScoreBronze)
+        if (planeScript.starsCollected >= minScoreBronze && planeScript.starsCollected < minScoreBronze)
         {
             image.sprite = bronzeMedal;
         }
-        else if (planeScript.starsCollected >= minScoreSilver)
+        else if (planeScript.starsCollected >= minScoreSilver && planeScript.starsCollected < minScoreGold)
         {
             image.sprite = silverMedal;
         }

@@ -14,7 +14,7 @@ public class MenuScript : MonoBehaviour
 
     GameObject plane;
 
-
+    AudioClip tapSound;
 
     private void Start()
     {
@@ -49,5 +49,10 @@ public class MenuScript : MonoBehaviour
             startGamePanel.transform.GetChild(i).gameObject.SetActive(false);
         }
         inGamePanel.SetActive(true);
+    }
+
+    public void PlayTapSound()
+    {
+        AudioSource.PlayClipAtPoint(tapSound, Vector3.zero);
     }
 }

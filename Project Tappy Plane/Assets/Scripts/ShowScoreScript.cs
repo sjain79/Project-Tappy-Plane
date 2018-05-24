@@ -37,6 +37,7 @@ public class ShowScoreScript : MonoBehaviour
             }
             else if (PlaneScript.score >= 10 && PlaneScript.score < 100)
             {
+                scoreUnitsPlace.enabled = true;
                 scoreTensPlace.enabled = true;
 
                 scoreUnitsPlace.transform.localPosition = new Vector2(26.5f, 0);
@@ -44,6 +45,8 @@ public class ShowScoreScript : MonoBehaviour
             }
             else if (PlaneScript.score >= 100)
             {
+                scoreUnitsPlace.enabled = true;
+                scoreTensPlace.enabled = true;
                 scoreHundredsPlace.enabled = true;
 
                 scoreUnitsPlace.transform.localPosition = new Vector2(53, 0);
@@ -59,5 +62,9 @@ public class ShowScoreScript : MonoBehaviour
         scoreUnitsPlace.sprite = numbers[PlaneScript.score % 10];
         scoreTensPlace.sprite = numbers[(PlaneScript.score / 10) % 10];
         scoreHundredsPlace.sprite = numbers[(PlaneScript.score / 100) % 10];
+
+        scoreUnitsPlace.SetNativeSize();
+        scoreTensPlace.SetNativeSize();
+        scoreHundredsPlace.SetNativeSize();
     }
 }
