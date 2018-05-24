@@ -1088,11 +1088,6 @@ MonoBehaviour:
   m_Script: {fileID: 2106099439, guid: 865c9af80f959334bbb4349f2ff90aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Title: FPS
-  NumberFormat: '#,##0.0'
-  _frameCount: 0
-  _dt: 0
-  _fps: 0
 --- !u!114 &831909156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,26 +1100,6 @@ MonoBehaviour:
   m_Script: {fileID: -1591817097, guid: 865c9af80f959334bbb4349f2ff90aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _valueProvider: {fileID: 0}
-  _history: []
-  _minValue: 0
-  _maxValue: 0
-  _avgValue: 0
-  _nextValue: 0
-  _nextMaxValue: 0
-  _nextMinValue: 0
-  _total: 0
-  _samples: 0
-  Image: {fileID: 831909157}
-  Text: {fileID: 919387293}
-  _elapsed: 0
-  _textHeight: 12
-  _imageRectTransform: {fileID: 0}
-  ReadInterval: 0.1
-  ColorizeText: 1
-  _textLineLength: 0
-  _colorizeTextBuffer: 0
-  _textLineFormat: 
 --- !u!114 &831909157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3148,6 +3123,7 @@ MonoBehaviour:
     type: 2}
   obstaclePrefab4: {fileID: 1656862522227880, guid: fc54baea01447ae4ba616b481ad995a5,
     type: 2}
+  starsScript: {fileID: 1554403655}
   spawnPositionX: 10
   spawnFrequency: 6
   spawnPositionY: 0
@@ -4697,8 +4673,6 @@ MonoBehaviour:
   m_Script: {fileID: 1315886156, guid: 865c9af80f959334bbb4349f2ff90aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Title: Memory
-  NumberFormat: '###,##0,K'
 --- !u!114 &2082362730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4711,26 +4685,6 @@ MonoBehaviour:
   m_Script: {fileID: -1591817097, guid: 865c9af80f959334bbb4349f2ff90aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _valueProvider: {fileID: 0}
-  _history: []
-  _minValue: 0
-  _maxValue: 0
-  _avgValue: 0
-  _nextValue: 0
-  _nextMaxValue: 0
-  _nextMinValue: 0
-  _total: 0
-  _samples: 0
-  Image: {fileID: 2082362731}
-  Text: {fileID: 644581181}
-  _elapsed: 0
-  _textHeight: 12
-  _imageRectTransform: {fileID: 0}
-  ReadInterval: 0.1
-  ColorizeText: 1
-  _textLineLength: 0
-  _colorizeTextBuffer: 0
-  _textLineFormat: 
 --- !u!114 &2082362731
 MonoBehaviour:
   m_ObjectHideFlags: 0
