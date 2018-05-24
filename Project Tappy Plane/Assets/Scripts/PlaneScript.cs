@@ -70,13 +70,17 @@ public class PlaneScript : MonoBehaviour {
             isPlayerDead = true;
             GameController.gameState = GameState.Gameover;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.tag == "Star")
         {
             starsCollected++;
             Destroy(collision.gameObject);
         }
 
-        if(collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag == "Obstacle")
         {
             isPlayerDead = true;
             GameController.gameState = GameState.Falling;

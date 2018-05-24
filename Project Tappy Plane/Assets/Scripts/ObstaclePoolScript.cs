@@ -64,14 +64,6 @@ public class ObstaclePoolScript : MonoBehaviour {
             }
         }
 
-        else if (GameController.gameState == GameState.Falling)
-        {
-            for (int i = 0; i < obstacles.Length; ++i)
-            {
-                obstacles[i].GetComponent<Collider2D>().enabled = false;
-            }
-        }
-
         else
         {
             firstPlaced = false;
