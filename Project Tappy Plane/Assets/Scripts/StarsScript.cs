@@ -9,9 +9,11 @@ public class StarsScript : MonoBehaviour {
     public Image bronzeUI, silverUI, goldUI;
     PlaneScript planeScript;
     ObstaclePoolScript poolScript;
+    float timeSinceLastSpawned;
 	void Start () {
         planeScript = player.GetComponent<PlaneScript>();
         poolScript = mainCamera.GetComponent<ObstaclePoolScript>();
+        timeSinceLastSpawned = poolScript.spawnFrequency / 2f;
         bronzeUI.fillAmount = 0f;
         silverUI.fillAmount = 0f;
         goldUI.fillAmount = 0f;

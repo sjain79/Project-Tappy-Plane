@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class MedalScript : MonoBehaviour
 {
-    public int minScoreBronze, minScoreSilver, minScoreGold;
+    [SerializeField]
+    int minScoreBronze, minScoreSilver, minScoreGold;
 
-    public Sprite bronzeMedal, silverMedal, goldMedal;
+    [SerializeField]
+    Sprite bronzeMedal, silverMedal, goldMedal;
 
     Image image;
 
